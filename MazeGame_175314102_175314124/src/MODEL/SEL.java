@@ -92,7 +92,7 @@ public class SEL {
     }
 
     public boolean isBatasKanan() {
-        if (posisiX + lebar < Tempat.batasKanan) {
+        if (posisiX + lebar < TEMPAT.batasKanan) {
             return false;
         } else {
             return true;
