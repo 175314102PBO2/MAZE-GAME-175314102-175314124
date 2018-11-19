@@ -36,6 +36,15 @@ public class Sel {
         this.warna = warna;
     }
 
+    public Sel(int posisiX, int posisiY, int lebar, int tinggi, char nilai, Color warna) {
+        this.posisiX = posisiX;
+        this.posisiY = posisiY;
+        this.lebar = lebar;
+        this.tinggi = tinggi;
+        this.nilai = nilai;
+        this.warna = warna;
+    }
+
     public int getPosisiX() {
         return posisiX;
     }
