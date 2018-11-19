@@ -92,4 +92,12 @@ public class Sel {
 
     }
 
+    public boolean isBatasKanan() {
+        if (posisiX + lebar < Tempat.batasKanan) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
 }
