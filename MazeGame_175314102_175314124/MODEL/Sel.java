@@ -100,4 +100,10 @@ public class Sel {
         }
     }
 
+    public void geserKanan() {
+        if (isBatasKanan() == false) {
+            posisiX = posisiX + lebar;
+        }
+    }
+
 }
