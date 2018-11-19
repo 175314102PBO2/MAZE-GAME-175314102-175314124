@@ -83,4 +83,13 @@ public class Sel {
         return nilai == '#';
     }
 
+    public boolean isBatasKiri() {
+        if (posisiX <= 0) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
 }
