@@ -274,6 +274,7 @@ public class Sel {
     public void setTinggi(int tinggi) {
         this.tinggi = tinggi;
     }
+    //
 
 
 }
