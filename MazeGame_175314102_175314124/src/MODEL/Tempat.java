@@ -7,6 +7,9 @@ package MODEL;
 
 import java.awt.Color;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -35,8 +38,76 @@ public class Tempat {
      * Hasil pembacaan file akan disimpan di atribut 'isi' dan juga di atribut daftarSel
      * @param file 
      */
-    public void bacaKonfigurasi(File file){
-        
+    public void bacaKonfigurasi(File file) throws IOException{
+           try {
+            FileInputStream fis = new FileInputStream(file);
+            String hasilBaca = "";
+            int dataInt;
+            int baris = 0;
+            int kolom = 0;
+            int t = 50;
+            int l = 50;
+
+            while ((dataInt = fis.read()) != -1) {
+                if ((char) dataInt != '\n') {
+                    if ((char) dataInt == '#') {
+                        hasilBaca = hasilBaca + (char) dataInt;
+                        Sel sel = new Sel();
+                        sel.setNilai((char) dataInt);
+                        sel.setWarna(Color.white);
+                        sel.setBaris(baris);
+                        sel.setKolom(kolom);
+                        sel.setTinggi(t);
+                        sel.setLebar(l);
+                        this.tambahSel(sel);
+                        kolom++;
+                    } else if ((char) dataInt == '.') {
+                        hasilBaca = hasilBaca + (char) dataInt;
+                        Sel sel = new Sel();
+                        sel.setNilai((char) dataInt);
+                        sel.setWarna(Color.red);
+                        sel.setBaris(baris);
+                        sel.setKolom(kolom);
+                        sel.setTinggi(t);
+                        sel.setLebar(l);
+                        this.tambahSel(sel);
+                        kolom++;
+                    } else if ((char) dataInt == '@') {
+                        hasilBaca = hasilBaca + (char) dataInt;
+                        Sel sel = new Sel();
+                        sel.setNilai((char) dataInt);
+                        sel.setWarna(Color.BLUE);
+                        sel.setBaris(baris);
+                        sel.setKolom(kolom);
+                        sel.setTinggi(t);
+                        sel.setLebar(l);
+                        this.tambahSel(sel);
+                        kolom++;
+                    } else if ((char) dataInt == 'o') {
+                        hasilBaca = hasilBaca + (char) dataInt;
+                        Sel sel = new Sel();
+                        sel.setNilai((char) dataInt);
+                        sel.setWarna(Color.GRAY);
+                        sel.setBaris(baris);
+                        sel.setKolom(kolom);
+                        sel.setTinggi(t);
+                        sel.setLebar(l);
+                        this.tambahSel(sel);
+                        kolom++;
+                    }
+
+                } else {
+                    hasilBaca = hasilBaca + (char) dataInt;
+                    baris++;
+                    kolom = 0;
+                }
+            }
+            this.setIsi(hasilBaca);
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Tempat.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(Tempat.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     /**
      * Fungsi penambah daftar sel.
