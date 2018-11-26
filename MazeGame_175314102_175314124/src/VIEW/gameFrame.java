@@ -12,6 +12,8 @@ import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
@@ -69,12 +71,16 @@ public class gameFrame extends JFrame {
         //action perfom for bacaKonfigurasiMenuItem
         bacaKonfigurasiMenuItem.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) throws IOException {
+            public void actionPerformed(ActionEvent e) {
                 JFileChooser jf = new JFileChooser();
                 int returnVal = jf.showOpenDialog(null);
                 Tempat tempat = new Tempat();
                 if (returnVal == JFileChooser.APPROVE_OPTION) {
-                    tempat.bacaKonfigurasi(jf.getSelectedFile());
+                    try {
+                        tempat.bacaKonfigurasi(jf.getSelectedFile());
+                    } catch (IOException ex) {
+                        Logger.getLogger(gameFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    }
                 }
                 Tempat.batasKanan = 500;
                 Tempat.batasBawah = 300;
