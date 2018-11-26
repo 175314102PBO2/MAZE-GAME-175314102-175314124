@@ -5,6 +5,7 @@
  */
 package VIEW;
 
+import java.awt.BorderLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -29,12 +30,12 @@ public class gameFrame extends JFrame{
         private JMenuItem bacaKonfigurasiMenuItem;
         private JMenuItem SimpanKonfigurasiMenuItem;
 
-        public GameFrame(String title) {
+        public gameFrame(String title) {
             this.setTitle(title);
             this.init();
         }
 
-        public GameFrame(String title, TempatPanel tempatPanel) {
+        public gameFrame(String title, TempatPanel tempatPanel) {
             setTitle(title);
             this.tempatPanel = tempatPanel;
             this.init();
