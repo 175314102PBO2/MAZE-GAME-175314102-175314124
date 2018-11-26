@@ -199,4 +199,5 @@ public class Tempat {
             Logger.getLogger(Tempat.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
 }
