@@ -5,8 +5,13 @@
  */
 package VIEW;
 
+import MODEL.Tempat;
 import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.IOException;
 import javax.swing.JButton;
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
@@ -61,7 +66,7 @@ public class gameFrame extends JFrame{
             //action perfom for bacaKonfigurasiMenuItem
             bacaKonfigurasiMenuItem.addActionListener(new ActionListener() {
                 @Override
-                public void actionPerformed(ActionEvent e) {
+                public void actionPerformed(ActionEvent e) throws IOException {
                     JFileChooser jf = new JFileChooser();
                     int returnVal = jf.showOpenDialog(null);
                     Tempat tempat = new Tempat();
