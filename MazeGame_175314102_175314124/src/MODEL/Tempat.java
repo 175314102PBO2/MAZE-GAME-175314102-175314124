@@ -9,37 +9,41 @@ import java.awt.Color;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author user only
  */
 public class Tempat {
+
     private int tinggi; // tinggi tempat Game
     private int lebar;  // lebar tempat Game
     private ArrayList<Sel> daftarSel; // daftar sel
 
     private String isi; // isi file konfigurasi
-    
+
     public static int batasKanan;
     public static int batasBawah;
     public static int batasKiri;
     public static int batasAtas;
-    
+
     public Tempat() {
         daftarSel = new ArrayList<Sel>();
     }
-    
-    
+
     /**
-     * Fungsi pembaca file konfigurasi.
-     * Hasil pembacaan file akan disimpan di atribut 'isi' dan juga di atribut daftarSel
-     * @param file 
+     * Fungsi pembaca file konfigurasi. Hasil pembacaan file akan disimpan di
+     * atribut 'isi' dan juga di atribut daftarSel
+     *
+     * @param file
      */
-    public void bacaKonfigurasi(File file) throws IOException{
-           try {
+    public void bacaKonfigurasi(File file) throws IOException {
+        try {
             FileInputStream fis = new FileInputStream(file);
             String hasilBaca = "";
             int dataInt;
@@ -109,23 +113,25 @@ public class Tempat {
             Logger.getLogger(Tempat.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+
     /**
      * Fungsi penambah daftar sel.
-     * @param sel 
+     *
+     * @param sel
      */
-    public void tambahSel(Sel sel){
+    public void tambahSel(Sel sel) {
         daftarSel.add(sel);
     }
 
     /**
-     * Fungsi hapus sel.
-     * Sel yang paling akhir diremove dari daftar sel.
+     * Fungsi hapus sel. Sel yang paling akhir diremove dari daftar sel.
      */
-    public void hapusSel(){
-        if(!daftarSel.isEmpty()){
+    public void hapusSel() {
+        if (!daftarSel.isEmpty()) {
             daftarSel.remove(0);
         }
     }
+
     /**
      * @return the tinggi
      */
@@ -180,5 +186,17 @@ public class Tempat {
      */
     public void setIsi(String isi) {
         this.isi = isi;
+    }
+
+    public void simpanKonfigurasi(File file) {
+        try {
+            FileOutputStream fos = new FileOutputStream(file);
+            fos.write(isi.getBytes());
+            fos.close();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Tempat.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(Tempat.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }
