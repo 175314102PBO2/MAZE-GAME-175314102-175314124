@@ -14,10 +14,10 @@ import java.awt.Color;
 public class Sel {
 
 
-    private int baris=0;
-    private int kolom=0;
-    private int lebar=25;
-    private int tinggi=25;
+    private int baris;
+    private int kolom;
+    private int lebar;
+    private int tinggi;
 
     private char nilai;
 
