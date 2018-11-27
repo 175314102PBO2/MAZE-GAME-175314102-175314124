@@ -43,6 +43,8 @@ public class gameFrame extends JFrame {
     private JButton pindahKiriButton;
     private JButton pindahAtasButton;
     private JButton pindahBawahButton;
+    private JButton tambahButton;
+    private JButton hapusButton;
 
     public gameFrame(String title) {
         this.setTitle(title);
