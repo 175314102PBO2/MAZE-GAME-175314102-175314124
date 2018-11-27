@@ -6,6 +6,7 @@
 package TEST;
 
 import MODEL.Tempat;
+import java.io.IOException;
 import javax.swing.JFileChooser;
 
 /**
@@ -14,24 +15,25 @@ import javax.swing.JFileChooser;
  */
 public class TestTempat {
 
-    JFileChooser jf = new JFileChooser();
-    int returnVal = jf.showOpenDialog(null);
-    Tempat tempat = new Tempat();
-    if (returnVal == JFileChooser.APPROVE_OPTION ) {
+    public static void main(String[] args) throws IOException {
+        JFileChooser jf = new JFileChooser();
+        int returnVal = jf.showOpenDialog(null);
+        Tempat tempat = new Tempat();
+        if (returnVal == JFileChooser.APPROVE_OPTION) {
             tempat.bacaKonfigurasi(jf.getSelectedFile());
-        // menampilkan atribut 'isi' dari kelas Tempat
-        System.out.println("Isi peta = ");
-        System.out.println(tempat.getIsi());
-        if (tempat.getDaftarSel() != null) {
-            for (int i = 0; i < tempat.getDaftarSel().size(); i++) {
-                // menampilkan nilai posisi Baris,posisi Kolom dan nilai
-                System.out.println(
-                        tempat.getDaftarSel().get(i).getBaris() + ","
-                        + tempat.getDaftarSel().get(i).getKolom() + ","
-                        + tempat.getDaftarSel().get(i).getNilai());
+            // menampilkan atribut 'isi' dari kelas Tempat
+            System.out.println("Isi peta = ");
+            System.out.println(tempat.getIsi());
+            if (tempat.getDaftarSel() != null) {
+                for (int i = 0; i < tempat.getDaftarSel().size(); i++) {
+                    // menampilkan nilai posisi Baris,posisi Kolom dan nilai
+                    System.out.println(
+                            tempat.getDaftarSel().get(i).getBaris() + ","
+                            + tempat.getDaftarSel().get(i).getKolom() + ","
+                            + tempat.getDaftarSel().get(i).getNilai());
 
+                }
             }
         }
     }
 }
-
