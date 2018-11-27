@@ -39,6 +39,10 @@ public class gameFrame extends JFrame {
     private JMenuItem exitMenuItem;
     private JMenuItem bacaKonfigurasiMenuItem;
     private JMenuItem SimpanKonfigurasiMenuItem;
+    private JButton pindahKananButton;
+    private JButton pindahKiriButton;
+    private JButton pindahAtasButton;
+    private JButton pindahBawahButton;
 
     public gameFrame(String title) {
         this.setTitle(title);
@@ -229,4 +233,3 @@ public class gameFrame extends JFrame {
         this.tempatPanel = tempatPanel;
     }
 }
-
