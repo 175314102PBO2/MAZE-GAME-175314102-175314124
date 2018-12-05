@@ -49,64 +49,82 @@ public class Tempat {
             int dataInt;
             int baris = 0;
             int kolom = 0;
-            int t = 50;
-            int l = 50;
 
             while ((dataInt = fis.read()) != -1) {
                 if ((char) dataInt != '\n') {
-                    if ((char) dataInt == '#') {
-                        hasilBaca = hasilBaca + (char) dataInt;
-                        Sel sel = new Sel();
-                        sel.setNilai((char) dataInt);
-                        sel.setWarna(Color.GREEN);
-                        sel.setBaris(baris);
-                        sel.setKolom(kolom);
-                        sel.setTinggi(t);
-                        sel.setLebar(l);
-                        this.tambahSel(sel);
-                        kolom++;
-                    } else if ((char) dataInt == '.') {
-                        hasilBaca = hasilBaca + (char) dataInt;
-                        Sel sel = new Sel();
-                        sel.setNilai((char) dataInt);
-                        sel.setWarna(Color.red);
-                        sel.setBaris(baris);
-                        sel.setKolom(kolom);
-                        sel.setTinggi(t);
-                        sel.setLebar(l);
-                        this.tambahSel(sel);
-                        kolom++;
-                    } else if ((char) dataInt == '@') {
-                        hasilBaca = hasilBaca + (char) dataInt;
-                        Sel sel = new Sel();
-                        sel.setNilai((char) dataInt);
-                        sel.setWarna(Color.BLUE);
-                        sel.setBaris(baris);
-                        sel.setKolom(kolom);
-                        sel.setTinggi(t);
-                        sel.setLebar(l);
-                        this.tambahSel(sel);
-                        kolom++;
-                    } else if ((char) dataInt == 'o') {
-                        hasilBaca = hasilBaca + (char) dataInt;
-                        Sel sel = new Sel();
-                        sel.setNilai((char) dataInt);
-                        sel.setWarna(Color.GRAY);
-                        sel.setBaris(baris);
-                        sel.setKolom(kolom);
-                        sel.setTinggi(t);
-                        sel.setLebar(l);
-                        this.tambahSel(sel);
-                        kolom++;
+                    switch ((char) dataInt) {
+                        case '#': {
+                            hasilBaca = hasilBaca + (char) dataInt;
+                            Sel sel = new Sel();
+                            sel.setTinggi(50);
+                            sel.setLebar(50);
+                            this.setTinggi(50);
+                            this.setLebar(50);
+                            sel.setNilai((char) dataInt);
+                            sel.setWarna(Color.RED);
+                            sel.setBaris(baris);
+                            sel.setKolom(kolom);
+                            this.tambahSel(sel);
+                            kolom++;
+                            break;
+                        }
+                        case '.': {
+                            hasilBaca = hasilBaca + (char) dataInt;
+                            Sel sel = new Sel();
+                            sel.setTinggi(50);
+                            sel.setLebar(50);
+                            this.setTinggi(50);
+                            this.setLebar(50);
+                            sel.setNilai((char) dataInt);
+                            sel.setWarna(Color.WHITE);
+                            sel.setBaris(baris);
+                            sel.setKolom(kolom);
+                            this.tambahSel(sel);
+                            kolom++;
+                            break;
+                        }
+                        case '@': {
+                            hasilBaca = hasilBaca + (char) dataInt;
+                            Sel sel = new Sel();
+                            sel.setTinggi(50);
+                            sel.setLebar(50);
+                            this.setTinggi(50);
+                            this.setLebar(50);
+                            sel.setNilai((char) dataInt);
+                            sel.setWarna(Color.BLUE);
+                            sel.setBaris(baris);
+                            sel.setKolom(kolom);
+                            this.tambahSel(sel);
+                            kolom++;
+                            break;
+                        }
+                        case 'o': {
+                            hasilBaca = hasilBaca + (char) dataInt;
+                            Sel sel = new Sel();
+                            sel.setTinggi(50);
+                            sel.setLebar(50);
+                            this.setTinggi(50);
+                            this.setLebar(50);
+                            sel.setNilai((char) dataInt);
+                            sel.setWarna(Color.PINK);
+                            sel.setBaris(baris);
+                            sel.setKolom(kolom);
+                            this.tambahSel(sel);
+                            kolom++;
+                            break;
+                        }
+                        default:
+                            break;
                     }
-
                 } else {
-                    hasilBaca = hasilBaca + (char) dataInt;
                     baris++;
                     kolom = 0;
+                    hasilBaca = hasilBaca + (char) dataInt;
                 }
             }
+
             this.setIsi(hasilBaca);
+
         } catch (FileNotFoundException ex) {
             Logger.getLogger(Tempat.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
@@ -199,5 +217,5 @@ public class Tempat {
             Logger.getLogger(Tempat.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
+
 }
