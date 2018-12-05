@@ -13,11 +13,10 @@ import java.awt.Color;
  */
 public class Sel {
 
-
-    private int baris;
-    private int kolom;
-    private int lebar;
-    private int tinggi;
+    private int baris = 0;
+    private int kolom = 0;
+    private int lebar = 25;
+    private int tinggi = 25;
 
     private char nilai;
 
@@ -81,7 +80,7 @@ public class Sel {
     public void geserKanan() {
         if (isBatasKanan() == false) {
             kolom++;
-        }else{
+        } else {
             kolom--;
         }
     }
@@ -92,7 +91,7 @@ public class Sel {
     public void geserKiri() {
         if (isBatasKiri() == false) {
             kolom--;
-        }else{
+        } else {
             kolom++;
         }
     }
@@ -101,7 +100,7 @@ public class Sel {
      * Fungsi untuk mengecek sel ada di batas atas
      */
     public boolean isBatasAtas() {
-        
+
         if (baris * tinggi <= 0) {
             return true;
         } else {
@@ -123,74 +122,73 @@ public class Sel {
     /**
      * Fungsi untuk geser atas
      */
-    public void geserAtas(){
+    public void geserAtas() {
         if (isBatasAtas() == false) {
             baris--;
-        }else{
+        } else {
             baris++;
         }
     }
-    
-    public void geserKananAtas(){
-        if (isBatasAtas() == false && isBatasKanan() == false ) {
+
+    public void geserKananAtas() {
+        if (isBatasAtas() == false && isBatasKanan() == false) {
             baris--;
             kolom++;
-        }else if (isBatasAtas() == false && isBatasKanan() == true) {
+        } else if (isBatasAtas() == false && isBatasKanan() == true) {
             baris--;
             kolom--;
-        }else if(isBatasAtas()==true && isBatasKanan()==false){
+        } else if (isBatasAtas() == true && isBatasKanan() == false) {
             baris++;
             kolom++;
-        }else{
+        } else {
             baris++;
             kolom--;
         }
     }
-    
+
     /**
      * Fungsi untuk geser bawah
      */
-    public void geserBawah(){
-        if (isBatasBawah()== false ) {
+    public void geserBawah() {
+        if (isBatasBawah() == false) {
             baris++;
-        }else{
+        } else {
             baris--;
         }
     }
-    
-    public void geserKananBawah(){
-        if (isBatasBawah()== false && isBatasKanan() == false) {
+
+    public void geserKananBawah() {
+        if (isBatasBawah() == false && isBatasKanan() == false) {
             baris++;
             kolom++;
-        }else if (isBatasBawah() == false && isBatasKanan() == true) {
+        } else if (isBatasBawah() == false && isBatasKanan() == true) {
             baris--;
             kolom--;
-        }else if(isBatasBawah()==true && isBatasKanan()==false){
+        } else if (isBatasBawah() == true && isBatasKanan() == false) {
             baris++;
             kolom++;
-        }else{
+        } else {
             baris++;
             kolom--;
         }
     }
-    
-    public void geserKiriBawah(){
-        if (isBatasBawah()== false && isBatasKiri() == false) {
+
+    public void geserKiriBawah() {
+        if (isBatasBawah() == false && isBatasKiri() == false) {
             baris++;
             kolom--;
         }
     }
-    
-    public void geserKiriAtas(){
-        if (isBatasAtas()== false && isBatasKiri() == false) {
+
+    public void geserKiriAtas() {
+        if (isBatasAtas() == false && isBatasKiri() == false) {
             baris--;
             kolom--;
-        }else{
-                
-            
-            
+        } else {
+
         }
     }
+
     /**
      * @return the baris
      */
@@ -275,6 +273,5 @@ public class Sel {
         this.tinggi = tinggi;
     }
     //
-
 
 }
