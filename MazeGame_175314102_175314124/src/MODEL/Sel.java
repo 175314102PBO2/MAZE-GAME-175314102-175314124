@@ -272,6 +272,45 @@ public class Sel {
     public void setTinggi(int tinggi) {
         this.tinggi = tinggi;
     }
-    //
+
+    public void serongKananAtas() {
+        if (isBatasAtas() == false && isBatasKanan() == false) {
+            baris--;
+            kolom++;
+        } else {
+            baris++;
+            kolom--;
+        }
+    }
+
+    public void serongKiriAtas() {
+        if (isBatasAtas() == false && isBatasKiri() == false) {
+            baris--;
+            kolom--;
+        } else {
+            baris++;
+            kolom++;
+        }
+    }
+
+    public void serongKiriBawah() {
+        if (isBatasBawah() == false && isBatasKiri() == false) {
+            baris++;
+            kolom--;
+        } else {
+            baris--;
+            kolom++;
+        }
+    }
+
+    public void serongKananBawah() {
+        if (isBatasBawah() == false && isBatasKanan() == false) {
+            baris++;
+            kolom++;
+        } else {
+            baris--;
+            kolom--;
+        }
+    }
 
 }
