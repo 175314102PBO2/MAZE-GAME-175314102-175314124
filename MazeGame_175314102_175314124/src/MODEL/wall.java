@@ -15,6 +15,10 @@ import javax.swing.ImageIcon;
  */
 public class wall extends Sel {
 
+    static int size() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     private char nilai;
 
     public wall(int x, int y, char nilai) {
