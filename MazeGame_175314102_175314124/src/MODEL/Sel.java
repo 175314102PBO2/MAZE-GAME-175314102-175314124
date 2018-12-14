@@ -77,22 +77,18 @@ public class Sel {
     /**
      * Fungsi untuk menggeser sel ke kanan
      */
-    public void geserKanan() {
+    public void geserKanan(int x) {
         if (isBatasKanan() == false) {
-            kolom++;
-        } else {
-            kolom--;
+            this.setKolom(kolom += x);
         }
     }
 
     /**
      * Fungsi untuk menggeser sel ke kanan
      */
-    public void geserKiri() {
+    public void geserKiri(int x) {
         if (isBatasKiri() == false) {
-            kolom--;
-        } else {
-            kolom++;
+            this.setKolom(kolom -= x);
         }
     }
 
@@ -122,11 +118,9 @@ public class Sel {
     /**
      * Fungsi untuk geser atas
      */
-    public void geserAtas() {
+    public void geserAtas(int x) {
         if (isBatasAtas() == false) {
-            baris--;
-        } else {
-            baris++;
+            this.setBaris(baris -= x);
         }
     }
 
@@ -149,11 +143,9 @@ public class Sel {
     /**
      * Fungsi untuk geser bawah
      */
-    public void geserBawah() {
+    public void geserBawah(int x) {
         if (isBatasBawah() == false) {
-            baris++;
-        } else {
-            baris--;
+            this.setBaris(baris += x);
         }
     }
 
