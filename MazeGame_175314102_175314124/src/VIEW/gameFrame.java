@@ -139,19 +139,14 @@ public class gameFrame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e
             ) {
-                String x = perintahText.getText().substring(0, 1);
-                if (perintahText.getText().equalsIgnoreCase((x) + "L")) {
-                    int y = Integer.valueOf(x);
-                    pindahKiri(y);
-                } else if (perintahText.getText().equalsIgnoreCase((x) + "R")) {
-                    int y = Integer.valueOf(x);
-                    pindahKanan(y);
-                } else if (perintahText.getText().equalsIgnoreCase((x) + "U")) {
-                    int y = Integer.valueOf(x);
-                    pindahAtas(y);
-                } else if (perintahText.getText().equalsIgnoreCase((x) + "D")) {
-                    int y = Integer.valueOf(x);
-                    pindahBawah(y);
+                if ("L".equalsIgnoreCase(perintahText.getText())) {
+                    pindahKiri();
+                } else if ("R".equalsIgnoreCase(perintahText.getText())) {
+                    pindahKanan();
+                } else if ("U".equalsIgnoreCase(perintahText.getText())) {
+                    pindahAtas();
+                } else if ("D".equalsIgnoreCase(perintahText.getText())) {
+                    pindahBawah();
                 }
             }
         }
@@ -187,54 +182,52 @@ public class gameFrame extends JFrame {
         getTempatPanel().repaint();
     }
 
-    public void pindahKiri(int x) {
-        // posisiX seluruh sel ditambah 20
-        // sehingga sel akan terlihat bergerak ke kiri
-        for (int i = 0; i < getTempatPanel().getTempat().getDaftarSel().size(); i++) {
-            // set posisiX yang baru
-            if (getTempatPanel().getTempat().getDaftarSel().get(i).getNilai() == '@') {
-                getTempatPanel().getTempat().getDaftarSel().get(i).geserKiri(x);
-                getTempatPanel().getTempat().getDaftarSel().get(i - x).geserKanan(x);
-            }
-        }
-        // gambar ulang tempat Panel
-        getTempatPanel().repaint();
-        Tempat tmp = new Tempat();
-        tmp.setDaftarSel(getTempatPanel().getTempat().getDaftarSel());
-        tmp.setIsi(getTempatPanel().getTempat().getIsi());
-        tempatPanel.setTempat(tmp);
-    }
-
-    public void pindahAtas(int x) {
-        // posisiX seluruh sel ditambah 20
-        // sehingga sel akan terlihat bergerak ke atas
-        for (int i = 0; i < getTempatPanel().getTempat().getDaftarSel().size(); i++) {
-            // set posisiX yang baru
-            if (getTempatPanel().getTempat().getDaftarSel().get(i).getNilai() == '@') {
-                getTempatPanel().getTempat().getDaftarSel().get(i).geserAtas(x);
-                getTempatPanel().getTempat().getDaftarSel().get(i - 8 * x).geserBawah(x);
-            }
-        }
-    }
-
-    public void pindahBawah(int x) {
-        // posisiX seluruh sel ditambah 20
-        // sehingga sel akan terlihat bergerak ke bawah
-        for (int i = 0; i < getTempatPanel().getTempat().getDaftarSel().size(); i++) {
-            // set posisiX yang baru
-            if (getTempatPanel().getTempat().getDaftarSel().get(i).getNilai() == '@') {
-                getTempatPanel().getTempat().getDaftarSel().get(i).geserBawah(x);
-                getTempatPanel().getTempat().getDaftarSel().get(i + 8 * x).geserAtas(x);
-            }
-        }
-        // gambar ulang tempat Panel
-        getTempatPanel().repaint();
-        Tempat tmp = new Tempat();
-        tmp.setDaftarSel(getTempatPanel().getTempat().getDaftarSel());
-        tmp.setIsi(getTempatPanel().getTempat().getIsi());
-        tempatPanel.setTempat(tmp);
-    }
-
+//    public void pindahKiri(int x) {
+//        // posisiX seluruh sel ditambah 20
+//        // sehingga sel akan terlihat bergerak ke kiri
+//        for (int i = 0; i < getTempatPanel().getTempat().getDaftarSel().size(); i++) {
+//            // set posisiX yang baru
+//            if (getTempatPanel().getTempat().getDaftarSel().get(i).getNilai() == '@') {
+//                getTempatPanel().getTempat().getDaftarSel().get(i).geserKiri(x);
+//                getTempatPanel().getTempat().getDaftarSel().get(i - x).geserKanan(x);
+//            }
+//        }
+//        // gambar ulang tempat Panel
+//        getTempatPanel().repaint();
+//        Tempat tmp = new Tempat();
+//        tmp.setDaftarSel(getTempatPanel().getTempat().getDaftarSel());
+//        tmp.setIsi(getTempatPanel().getTempat().getIsi());
+//        tempatPanel.setTempat(tmp);
+//    }
+//    public void pindahAtas(int x) {
+//        // posisiX seluruh sel ditambah 20
+//        // sehingga sel akan terlihat bergerak ke atas
+//        for (int i = 0; i < getTempatPanel().getTempat().getDaftarSel().size(); i++) {
+//            // set posisiX yang baru
+//            if (getTempatPanel().getTempat().getDaftarSel().get(i).getNilai() == '@') {
+//                getTempatPanel().getTempat().getDaftarSel().get(i).geserAtas(x);
+//                getTempatPanel().getTempat().getDaftarSel().get(i - 8 * x).geserBawah(x);
+//            }
+//        }
+//    }
+//
+//    public void pindahBawah(int x) {
+//        // posisiX seluruh sel ditambah 20
+//        // sehingga sel akan terlihat bergerak ke bawah
+//        for (int i = 0; i < getTempatPanel().getTempat().getDaftarSel().size(); i++) {
+//            // set posisiX yang baru
+//            if (getTempatPanel().getTempat().getDaftarSel().get(i).getNilai() == '@') {
+//                getTempatPanel().getTempat().getDaftarSel().get(i).geserBawah(x);
+//                getTempatPanel().getTempat().getDaftarSel().get(i + 8 * x).geserAtas(x);
+//            }
+//        }
+//        // gambar ulang tempat Panel
+//        getTempatPanel().repaint();
+//        Tempat tmp = new Tempat();
+//        tmp.setDaftarSel(getTempatPanel().getTempat().getDaftarSel());
+//        tmp.setIsi(getTempatPanel().getTempat().getIsi());
+//        tempatPanel.setTempat(tmp);
+//    }
     /**
      * @return the tempatPanel
      */
@@ -249,15 +242,53 @@ public class gameFrame extends JFrame {
         this.tempatPanel = tempatPanel;
     }
 
-    public void pindahKanan(int x) {
+//    public void pindahKanan(int x) {
+//        // posisiX seluruh sel ditambah 20
+//        // sehingga sel akan terlihat bergerak ke kanan
+//        for (int i = 0; i < getTempatPanel().getTempat().getDaftarSel().size(); i++) {
+//            // set posisiX yang baru
+//            if (getTempatPanel().getTempat().getDaftarSel().get(i).getNilai() == '@') {
+//                getTempatPanel().getTempat().getDaftarSel().get(i).geserKanan(x);
+//                getTempatPanel().getTempat().getDaftarSel().get(i + x).geserKiri(x);
+//            }
+//        }
+//    }
+    public void pindahKiri() {
         // posisiX seluruh sel ditambah 20
-        // sehingga sel akan terlihat bergerak ke kanan
+        // sehingga sel akan terlihat bergerak ke kiri
         for (int i = 0; i < getTempatPanel().getTempat().getDaftarSel().size(); i++) {
             // set posisiX yang baru
             if (getTempatPanel().getTempat().getDaftarSel().get(i).getNilai() == '@') {
-                getTempatPanel().getTempat().getDaftarSel().get(i).geserKanan(x);
-                getTempatPanel().getTempat().getDaftarSel().get(i + x).geserKiri(x);
+                getTempatPanel().getTempat().getDaftarSel().get(i).geserKiri();
             }
         }
+        // gambar ulang tempat Panel
+        getTempatPanel().repaint();
+    }
+
+    public void pindahAtas() {
+        // posisiX seluruh sel ditambah 20
+        // sehingga sel akan terlihat bergerak ke atas
+        for (int i = 0; i < getTempatPanel().getTempat().getDaftarSel().size(); i++) {
+            // set posisiX yang baru
+            if (getTempatPanel().getTempat().getDaftarSel().get(i).getNilai() == '@') {
+                getTempatPanel().getTempat().getDaftarSel().get(i).geserAtas();
+            }
+        }
+        // gambar ulang tempat Panel
+        getTempatPanel().repaint();
+    }
+
+    public void pindahBawah() {
+        // posisiX seluruh sel ditambah 20
+        // sehingga sel akan terlihat bergerak ke bawah
+        for (int i = 0; i < getTempatPanel().getTempat().getDaftarSel().size(); i++) {
+            // set posisiX yang baru
+            if (getTempatPanel().getTempat().getDaftarSel().get(i).getNilai() == '@') {
+                getTempatPanel().getTempat().getDaftarSel().get(i).geserBawah();
+            }
+        }
+        // gambar ulang tempat Panel
+        getTempatPanel().repaint();
     }
 }
