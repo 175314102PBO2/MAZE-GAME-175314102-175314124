@@ -181,6 +181,14 @@ public class Sel {
         }
     }
 
+    public void geserKiri() {
+        if (isBatasKiri() == false) {
+            kolom--;
+        } else {
+            kolom++;
+        }
+    }
+
     /**
      * @return the baris
      */
@@ -302,6 +310,30 @@ public class Sel {
         } else {
             baris--;
             kolom--;
+        }
+    }
+
+    public void geserKanan() {
+        if (isBatasKanan() == false) {
+            kolom++;
+        } else {
+            kolom--;
+        }
+    }
+
+    public void geserAtas() {
+        if (isBatasAtas() == false) {
+            baris--;
+        } else {
+            baris++;
+        }
+    }
+
+    public void geserBawah() {
+        if (isBatasBawah() == false) {
+            baris++;
+        } else {
+            baris--;
         }
     }
 
