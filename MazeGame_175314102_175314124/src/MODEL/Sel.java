@@ -91,7 +91,6 @@ public class Sel {
 //            this.setKolom(kolom -= x);
 //        }
 //    }
-
     /**
      * Fungsi untuk mengecek sel ada di batas atas
      */
@@ -123,7 +122,6 @@ public class Sel {
 //            this.setBaris(baris -= x);
 //        }
 //    }
-
 //    public void geserKananAtas() {
 //        if (isBatasAtas() == false && isBatasKanan() == false) {
 //            baris--;
@@ -139,16 +137,14 @@ public class Sel {
 //            kolom--;
 //        }
 //    }
-
     /**
-     * Fungsi untuk geser bawah
-//     */
+     * Fungsi untuk geser bawah //
+     */
 //    public void geserBawah(int x) {
 //        if (isBatasBawah() == false) {
 //            this.setBaris(baris += x);
 //        }
 //    }
-
 //    public void geserKananBawah() {
 //        if (isBatasBawah() == false && isBatasKanan() == false) {
 //            baris++;
@@ -164,7 +160,6 @@ public class Sel {
 //            kolom--;
 //        }
 //    }
-
 //    public void geserKiriBawah() {
 //        if (isBatasBawah() == false && isBatasKiri() == false) {
 //            baris++;
@@ -180,13 +175,16 @@ public class Sel {
 //
 //        }
 //    }
-
     public void geserKiri() {
         if (isBatasKiri() == false) {
             kolom--;
         } else {
             kolom++;
         }
+    }
+
+    public void Tetap() {
+        this.kolom=kolom;
     }
 
     /**
@@ -292,7 +290,6 @@ public class Sel {
 //            kolom++;
 //        }
 //    }
-
 //    public void serongKiriBawah() {
 //        if (isBatasBawah() == false && isBatasKiri() == false) {
 //            baris++;
@@ -312,7 +309,6 @@ public class Sel {
 //            kolom--;
 //        }
 //    }
-
     public void geserKanan() {
         if (isBatasKanan() == false) {
             kolom++;
