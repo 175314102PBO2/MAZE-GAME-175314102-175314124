@@ -15,8 +15,8 @@ public class Sel {
 
     private int baris = 0;
     private int kolom = 0;
-    private int lebar = 25;
-    private int tinggi = 25;
+    private int lebar = 20;
+    private int tinggi = 20;
 
     private char nilai;
 
@@ -77,20 +77,20 @@ public class Sel {
     /**
      * Fungsi untuk menggeser sel ke kanan
      */
-    public void geserKanan(int x) {
-        if (isBatasKanan() == false) {
-            this.setKolom(kolom += x);
-        }
-    }
-
-    /**
-     * Fungsi untuk menggeser sel ke kanan
-     */
-    public void geserKiri(int x) {
-        if (isBatasKiri() == false) {
-            this.setKolom(kolom -= x);
-        }
-    }
+//    public void geserKanan(int x) {
+//        if (isBatasKanan() == false) {
+//            this.setKolom(kolom += x);
+//        }
+//    }
+//
+//    /**
+//     * Fungsi untuk menggeser sel ke kanan
+//     */
+//    public void geserKiri(int x) {
+//        if (isBatasKiri() == false) {
+//            this.setKolom(kolom -= x);
+//        }
+//    }
 
     /**
      * Fungsi untuk mengecek sel ada di batas atas
@@ -118,11 +118,11 @@ public class Sel {
     /**
      * Fungsi untuk geser atas
      */
-    public void geserAtas(int x) {
-        if (isBatasAtas() == false) {
-            this.setBaris(baris -= x);
-        }
-    }
+//    public void geserAtas(int x) {
+//        if (isBatasAtas() == false) {
+//            this.setBaris(baris -= x);
+//        }
+//    }
 
 //    public void geserKananAtas() {
 //        if (isBatasAtas() == false && isBatasKanan() == false) {
@@ -142,12 +142,12 @@ public class Sel {
 
     /**
      * Fungsi untuk geser bawah
-     */
-    public void geserBawah(int x) {
-        if (isBatasBawah() == false) {
-            this.setBaris(baris += x);
-        }
-    }
+//     */
+//    public void geserBawah(int x) {
+//        if (isBatasBawah() == false) {
+//            this.setBaris(baris += x);
+//        }
+//    }
 
 //    public void geserKananBawah() {
 //        if (isBatasBawah() == false && isBatasKanan() == false) {

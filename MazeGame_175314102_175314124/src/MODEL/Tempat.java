@@ -68,13 +68,13 @@ public class Tempat {
                             kolom++;
                             break;
                         }
-                        case '.': {
+                        case ' ': {
                             hasilBaca = hasilBaca + (char) dataInt;
                             Sel sel = new Sel();
-                            sel.setTinggi(50);
-                            sel.setLebar(50);
-                            this.setTinggi(50);
-                            this.setLebar(50);
+                            sel.setTinggi(0);
+                            sel.setLebar(0);
+                            this.setTinggi(0);
+                            this.setLebar(0);
                             sel.setNilai((char) dataInt);
                             sel.setWarna(Color.WHITE);
                             sel.setBaris(baris);
@@ -106,7 +106,7 @@ public class Tempat {
                             this.setTinggi(50);
                             this.setLebar(50);
                             sel.setNilai((char) dataInt);
-                            sel.setWarna(Color.PINK);
+                            sel.setWarna(Color.BLACK);
                             sel.setBaris(baris);
                             sel.setKolom(kolom);
                             this.tambahSel(sel);
