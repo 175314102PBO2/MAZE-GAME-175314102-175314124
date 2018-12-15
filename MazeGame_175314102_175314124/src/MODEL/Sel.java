@@ -183,8 +183,14 @@ public class Sel {
         }
     }
 
-    public void Tetap() {
-        this.kolom=kolom;
+    public void geserKiri(int x) {
+        if (isBatasKiri() == false) {
+            if (Tempat.batasKiri == x) {
+                kolom--;
+            }
+        } else {
+            kolom++;
+        }
     }
 
     /**
