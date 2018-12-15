@@ -183,16 +183,6 @@ public class Sel {
         }
     }
 
-    public void geserKiri(int x) {
-        if (isBatasKiri() == false) {
-            if (Tempat.batasKiri == x) {
-                kolom--;
-            }
-        } else {
-            kolom++;
-        }
-    }
-
     /**
      * @return the baris
      */
