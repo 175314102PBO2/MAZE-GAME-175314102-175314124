@@ -259,6 +259,7 @@ public class gameFrame extends JFrame {
         for (int i = 0; i < getTempatPanel().getTempat().getDaftarSel().size(); i++) {
             // set posisiX yang baru
             if (getTempatPanel().getTempat().getDaftarSel().get(i).getNilai() == '@') {
+
                 getTempatPanel().getTempat().getDaftarSel().get(i).geserKiri();
             }
 
