@@ -91,7 +91,7 @@ public class Tempat {
                             this.setTinggi(50);
                             this.setLebar(50);
                             sel.setNilai((char) dataInt);
-                            sel.setWarna(Color.BLUE);
+                            sel.setWarna(Color.YELLOW);
                             sel.setBaris(baris);
                             sel.setKolom(kolom);
                             this.tambahSel(sel);

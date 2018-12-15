@@ -124,21 +124,21 @@ public class Sel {
         }
     }
 
-    public void geserKananAtas() {
-        if (isBatasAtas() == false && isBatasKanan() == false) {
-            baris--;
-            kolom++;
-        } else if (isBatasAtas() == false && isBatasKanan() == true) {
-            baris--;
-            kolom--;
-        } else if (isBatasAtas() == true && isBatasKanan() == false) {
-            baris++;
-            kolom++;
-        } else {
-            baris++;
-            kolom--;
-        }
-    }
+//    public void geserKananAtas() {
+//        if (isBatasAtas() == false && isBatasKanan() == false) {
+//            baris--;
+//            kolom++;
+//        } else if (isBatasAtas() == false && isBatasKanan() == true) {
+//            baris--;
+//            kolom--;
+//        } else if (isBatasAtas() == true && isBatasKanan() == false) {
+//            baris++;
+//            kolom++;
+//        } else {
+//            baris++;
+//            kolom--;
+//        }
+//    }
 
     /**
      * Fungsi untuk geser bawah
@@ -149,37 +149,37 @@ public class Sel {
         }
     }
 
-    public void geserKananBawah() {
-        if (isBatasBawah() == false && isBatasKanan() == false) {
-            baris++;
-            kolom++;
-        } else if (isBatasBawah() == false && isBatasKanan() == true) {
-            baris--;
-            kolom--;
-        } else if (isBatasBawah() == true && isBatasKanan() == false) {
-            baris++;
-            kolom++;
-        } else {
-            baris++;
-            kolom--;
-        }
-    }
+//    public void geserKananBawah() {
+//        if (isBatasBawah() == false && isBatasKanan() == false) {
+//            baris++;
+//            kolom++;
+//        } else if (isBatasBawah() == false && isBatasKanan() == true) {
+//            baris--;
+//            kolom--;
+//        } else if (isBatasBawah() == true && isBatasKanan() == false) {
+//            baris++;
+//            kolom++;
+//        } else {
+//            baris++;
+//            kolom--;
+//        }
+//    }
 
-    public void geserKiriBawah() {
-        if (isBatasBawah() == false && isBatasKiri() == false) {
-            baris++;
-            kolom--;
-        }
-    }
-
-    public void geserKiriAtas() {
-        if (isBatasAtas() == false && isBatasKiri() == false) {
-            baris--;
-            kolom--;
-        } else {
-
-        }
-    }
+//    public void geserKiriBawah() {
+//        if (isBatasBawah() == false && isBatasKiri() == false) {
+//            baris++;
+//            kolom--;
+//        }
+//    }
+//
+//    public void geserKiriAtas() {
+//        if (isBatasAtas() == false && isBatasKiri() == false) {
+//            baris--;
+//            kolom--;
+//        } else {
+//
+//        }
+//    }
 
     public void geserKiri() {
         if (isBatasKiri() == false) {
@@ -273,45 +273,45 @@ public class Sel {
         this.tinggi = tinggi;
     }
 
-    public void serongKananAtas() {
-        if (isBatasAtas() == false && isBatasKanan() == false) {
-            baris--;
-            kolom++;
-        } else {
-            baris++;
-            kolom--;
-        }
-    }
+//    public void serongKananAtas() {
+//        if (isBatasAtas() == false && isBatasKanan() == false) {
+//            baris--;
+//            kolom++;
+//        } else {
+//            baris++;
+//            kolom--;
+//        }
+//    }
+//
+//    public void serongKiriAtas() {
+//        if (isBatasAtas() == false && isBatasKiri() == false) {
+//            baris--;
+//            kolom--;
+//        } else {
+//            baris++;
+//            kolom++;
+//        }
+//    }
 
-    public void serongKiriAtas() {
-        if (isBatasAtas() == false && isBatasKiri() == false) {
-            baris--;
-            kolom--;
-        } else {
-            baris++;
-            kolom++;
-        }
-    }
-
-    public void serongKiriBawah() {
-        if (isBatasBawah() == false && isBatasKiri() == false) {
-            baris++;
-            kolom--;
-        } else {
-            baris--;
-            kolom++;
-        }
-    }
-
-    public void serongKananBawah() {
-        if (isBatasBawah() == false && isBatasKanan() == false) {
-            baris++;
-            kolom++;
-        } else {
-            baris--;
-            kolom--;
-        }
-    }
+//    public void serongKiriBawah() {
+//        if (isBatasBawah() == false && isBatasKiri() == false) {
+//            baris++;
+//            kolom--;
+//        } else {
+//            baris--;
+//            kolom++;
+//        }
+//    }
+//
+//    public void serongKananBawah() {
+//        if (isBatasBawah() == false && isBatasKanan() == false) {
+//            baris++;
+//            kolom++;
+//        } else {
+//            baris--;
+//            kolom--;
+//        }
+//    }
 
     public void geserKanan() {
         if (isBatasKanan() == false) {
