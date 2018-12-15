@@ -170,12 +170,12 @@ public class gameFrame extends JFrame {
      * Fungsi untuk memindahkan sel dan menggambar ulang
      */
     public void pindahKanan() {
-        // posisiX seluruh sel ditambah 20
         // sehingga sel akan terlihat bergerak ke kanan
         for (int i = 0; i < getTempatPanel().getTempat().getDaftarSel().size(); i++) {
             // set posisiX yang baru
             if (getTempatPanel().getTempat().getDaftarSel().get(i).getNilai() == '@') {
                 getTempatPanel().getTempat().getDaftarSel().get(i).geserKanan();
+
             }
         }
         // gambar ulang tempat Panel
