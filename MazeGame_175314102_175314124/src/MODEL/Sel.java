@@ -114,67 +114,7 @@ public class Sel {
         }
     }
 
-    /**
-     * Fungsi untuk geser atas
-     */
-//    public void geserAtas(int x) {
-//        if (isBatasAtas() == false) {
-//            this.setBaris(baris -= x);
-//        }
-//    }
-//    public void geserKananAtas() {
-//        if (isBatasAtas() == false && isBatasKanan() == false) {
-//            baris--;
-//            kolom++;
-//        } else if (isBatasAtas() == false && isBatasKanan() == true) {
-//            baris--;
-//            kolom--;
-//        } else if (isBatasAtas() == true && isBatasKanan() == false) {
-//            baris++;
-//            kolom++;
-//        } else {
-//            baris++;
-//            kolom--;
-//        }
-//    }
-    /**
-     * Fungsi untuk geser bawah //
-     */
-//    public void geserBawah(int x) {
-//        if (isBatasBawah() == false) {
-//            this.setBaris(baris += x);
-//        }
-//    }
-//    public void geserKananBawah() {
-//        if (isBatasBawah() == false && isBatasKanan() == false) {
-//            baris++;
-//            kolom++;
-//        } else if (isBatasBawah() == false && isBatasKanan() == true) {
-//            baris--;
-//            kolom--;
-//        } else if (isBatasBawah() == true && isBatasKanan() == false) {
-//            baris++;
-//            kolom++;
-//        } else {
-//            baris++;
-//            kolom--;
-//        }
-//    }
-//    public void geserKiriBawah() {
-//        if (isBatasBawah() == false && isBatasKiri() == false) {
-//            baris++;
-//            kolom--;
-//        }
-//    }
-//
-//    public void geserKiriAtas() {
-//        if (isBatasAtas() == false && isBatasKiri() == false) {
-//            baris--;
-//            kolom--;
-//        } else {
-//
-//        }
-//    }
+ 
     public void geserKiri() {
         if (isBatasKiri() == false) {
             kolom--;
