@@ -261,9 +261,12 @@ public class gameFrame extends JFrame {
             if (getTempatPanel().getTempat().getDaftarSel().get(i).getNilai() == '@') {
                 getTempatPanel().getTempat().getDaftarSel().get(i).geserKiri();
             }
+
         }
+
         // gambar ulang tempat Panel
         getTempatPanel().repaint();
+
     }
 
     public void pindahAtas() {
