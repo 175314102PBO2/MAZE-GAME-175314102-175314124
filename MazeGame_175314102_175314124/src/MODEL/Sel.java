@@ -119,6 +119,7 @@ public class Sel {
         if (isBatasKiri() == false) {
             kolom--;
         } else {
+            
             kolom++;
         }
     }
