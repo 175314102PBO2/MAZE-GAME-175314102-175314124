@@ -40,7 +40,7 @@ public class TestGame2 {
             }
         }
         // Set ukuran tempat
-        Tempat.batasKanan = 350;
+        Tempat.batasKanan = 400;
         Tempat.batasBawah = 350;
         // buat tempatPanel dan tambahkan tempat ke tempatPanel
         TempatPanel tempatPanel = new TempatPanel();
