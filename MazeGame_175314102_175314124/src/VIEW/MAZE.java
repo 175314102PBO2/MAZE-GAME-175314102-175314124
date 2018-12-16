@@ -45,7 +45,7 @@ public class MAZE extends javax.swing.JFrame {
         okButton = new javax.swing.JButton();
         undoButton = new javax.swing.JButton();
         restartButton = new javax.swing.JButton();
-        cheatButton = new javax.swing.JButton();
+        jlrcepatButton = new javax.swing.JButton();
         saveButton = new javax.swing.JButton();
         loadButton = new javax.swing.JButton();
         selPanel = new javax.swing.JPanel();
@@ -134,11 +134,11 @@ public class MAZE extends javax.swing.JFrame {
             }
         });
 
-        cheatButton.setText("Cheat");
-        cheatButton.setEnabled(bantu);
-        cheatButton.addActionListener(new java.awt.event.ActionListener() {
+        jlrcepatButton.setText("Jalur Cepat");
+        jlrcepatButton.setEnabled(bantu);
+        jlrcepatButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cheatButtonActionPerformed(evt);
+                jlrcepatButtonActionPerformed(evt);
             }
         });
 
@@ -220,7 +220,7 @@ public class MAZE extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(restartButton, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cheatButton)
+                        .addComponent(jlrcepatButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(saveButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -231,7 +231,7 @@ public class MAZE extends javax.swing.JFrame {
                         .addComponent(perintahText, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(okButton, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(400, Short.MAX_VALUE))
+                .addContainerGap(374, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
@@ -250,7 +250,7 @@ public class MAZE extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(undoButton)
                     .addComponent(restartButton)
-                    .addComponent(cheatButton)
+                    .addComponent(jlrcepatButton)
                     .addComponent(saveButton)
                     .addComponent(loadButton))
                 .addContainerGap())
@@ -282,7 +282,7 @@ public class MAZE extends javax.swing.JFrame {
             int y = (tinggi - peta.getHeight()) / 2;
             peta.setLocation(x, y);
             bantu = true;
-            cheatButton.setEnabled(bantu);
+            jlrcepatButton.setEnabled(bantu);
             okButton.setEnabled(bantu);
             undoButton.setEnabled(bantu);
             restartButton.setEnabled(bantu);
@@ -334,7 +334,7 @@ public class MAZE extends javax.swing.JFrame {
 
     }//GEN-LAST:event_menuBarActionPerformed
 
-    private void cheatButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cheatButtonActionPerformed
+    private void jlrcepatButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jlrcepatButtonActionPerformed
         int a = peta.getRampung().getPosisiX();
         int b = peta.getRampung().getPosisiY();
 //        System.out.println("a : "+a);
@@ -344,7 +344,7 @@ public class MAZE extends javax.swing.JFrame {
         peta.getPelakon().setPosisiY(b);
         repaint();
         isCompleted();
-    }//GEN-LAST:event_cheatButtonActionPerformed
+    }//GEN-LAST:event_jlrcepatButtonActionPerformed
 
     private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
         peta.saveKonfigurasiPeta();
@@ -382,12 +382,12 @@ public class MAZE extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDialog AboutDialog;
-    private javax.swing.JButton cheatButton;
     private javax.swing.JMenuItem exitMenuItem;
     private javax.swing.JMenuItem howToplayMenu;
     private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JButton jlrcepatButton;
     private javax.swing.JButton loadButton;
     private javax.swing.JMenu menuBar;
     private javax.swing.JButton okButton;

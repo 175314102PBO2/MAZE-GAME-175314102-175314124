@@ -144,7 +144,7 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="restartButton" min="-2" pref="77" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="cheatButton" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlrcepatButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="saveButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -158,7 +158,7 @@
                       <Component id="okButton" min="-2" pref="56" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="400" max="32767" attributes="0"/>
+              <EmptySpace pref="374" max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
@@ -182,7 +182,7 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="undoButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="restartButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="cheatButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jlrcepatButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="saveButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="loadButton" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
@@ -248,15 +248,15 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="restartButtonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="cheatButton">
+    <Component class="javax.swing.JButton" name="jlrcepatButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Cheat"/>
+        <Property name="text" type="java.lang.String" value="Jalur Cepat"/>
         <Property name="enabled" type="boolean" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="bantu" type="code"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cheatButtonActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jlrcepatButtonActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="saveButton">
