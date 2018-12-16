@@ -18,7 +18,7 @@ public class Rampung extends Sel{
     public Rampung(int X, int Y) {
         super(X, Y);
 
-        URL loc = this.getClass().getResource("finish.png");
+        URL loc = this.getClass().getResource("Lawang.png");
         ImageIcon g = new ImageIcon(loc);
         Image image = g.getImage();
         this.setImage(image);

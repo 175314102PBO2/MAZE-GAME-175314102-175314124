@@ -13,11 +13,12 @@ import javax.swing.ImageIcon;
  *
  * @author ACER
  */
-public class Pelakon extends Sel{
-       public Pelakon(int X, int Y) {
+public class Pelakon extends Sel {
+
+    public Pelakon(int X, int Y) {
         super(X, Y);
 
-        URL loc = this.getClass().getResource("pemain.png");
+        URL loc = this.getClass().getResource("Kuli.jpg");
         ImageIcon iia = new ImageIcon(loc);
 
         Image image = iia.getImage();
@@ -30,5 +31,5 @@ public class Pelakon extends Sel{
         int ny = this.getPosisiY() + Y;
         this.setPosisiX(nx);
         this.setPosisiY(ny);
-    } 
+    }
 }

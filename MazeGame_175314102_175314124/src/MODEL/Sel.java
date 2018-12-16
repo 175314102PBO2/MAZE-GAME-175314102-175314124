@@ -16,7 +16,7 @@ public class Sel {
 
     private int posisiY;
     private int posisiX;
-    private int Jarak = 450;
+    private int Jarak = 45;
 
     private Image image;
 
