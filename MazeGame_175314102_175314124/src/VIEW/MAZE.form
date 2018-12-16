@@ -92,7 +92,7 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="howToplayMenu">
               <Properties>
-                <Property name="text" type="java.lang.String" value="About"/>
+                <Property name="text" type="java.lang.String" value="PERINTAH"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="howToplayMenuActionPerformed"/>

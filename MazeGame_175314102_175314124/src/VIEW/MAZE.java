@@ -188,7 +188,7 @@ public class MAZE extends javax.swing.JFrame {
         });
         menuBar.add(openMenuItem);
 
-        howToplayMenu.setText("About");
+        howToplayMenu.setText("PERINTAH");
         howToplayMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 howToplayMenuActionPerformed(evt);
@@ -273,7 +273,7 @@ public class MAZE extends javax.swing.JFrame {
             file = jFileChooser1.getSelectedFile();
             peta = new Tempat(file);
             selPanel.add(peta);
-            peta.setSize(peta.getLebar() + 50, peta.getTinggi() + 50);
+            peta.setSize(peta.getLebar() + 45, peta.getTinggi() + 45);
             //setelah diset panel sel, kita letakkan posisi peta Mazegame
             int lebar = selPanel.getWidth();
             int tinggi = selPanel.getHeight();
