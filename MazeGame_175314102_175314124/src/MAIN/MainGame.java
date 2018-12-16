@@ -5,7 +5,7 @@
  */
 package MAIN;
 
-import VIEW.gameFrame;
+import VIEW.MAZE;
 
 /**
  *
@@ -14,6 +14,7 @@ import VIEW.gameFrame;
 public class MainGame {
 
     public static void main(String[] args) {
-        gameFrame game = new gameFrame("Amel Siska");
+       MAZE GAME = new MAZE();
+        GAME.setVisible(true);
     }
 }
