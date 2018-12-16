@@ -11,8 +11,7 @@ import javax.swing.*;
 import MODEL.Tempat;
 
 /**
- *
- * @author Project_MazeGame_175314080_175314103
+
  */
 public class MAZE extends javax.swing.JFrame {
 
