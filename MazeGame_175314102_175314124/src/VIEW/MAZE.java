@@ -9,9 +9,10 @@ import java.io.File;
 import java.util.*;
 import javax.swing.*;
 import MODEL.Tempat;
+import java.awt.Toolkit;
 
 /**
-
+ *
  */
 public class MAZE extends javax.swing.JFrame {
 
@@ -21,9 +22,9 @@ public class MAZE extends javax.swing.JFrame {
     boolean bantu = false;//Untuk Button
 
     public MAZE() {
+        setIcon();
         initComponents();
     }
-
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -334,15 +335,19 @@ public class MAZE extends javax.swing.JFrame {
     }//GEN-LAST:event_menuBarActionPerformed
 
     private void cheatButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cheatButtonActionPerformed
-        int a = peta.getRampung().getPosisiX() - 45;
-        int b = peta.getRampung().getPosisiY() - 45;
-        peta.getPelakon().MLAKU(a, b);
+        int a = peta.getRampung().getPosisiX();
+        int b = peta.getRampung().getPosisiY();
+//        System.out.println("a : "+a);
+//        System.out.println("b : "+b);
+//        peta.getPelakon().MLAKU(a, b);
+        peta.getPelakon().setPosisiX(a);
+        peta.getPelakon().setPosisiY(b);
         repaint();
         isCompleted();
     }//GEN-LAST:event_cheatButtonActionPerformed
 
     private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
-        peta.saveKonfigurasiPeta();        
+        peta.saveKonfigurasiPeta();
     }//GEN-LAST:event_saveButtonActionPerformed
 
     private void loadButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loadButtonActionPerformed
@@ -396,4 +401,8 @@ public class MAZE extends javax.swing.JFrame {
     private javax.swing.JButton tutupButton;
     private javax.swing.JButton undoButton;
     // End of variables declaration//GEN-END:variables
+
+    private void setIcon() {
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("Kuli.jpg")));
+    }
 }
