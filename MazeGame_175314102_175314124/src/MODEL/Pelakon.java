@@ -32,4 +32,5 @@ public class Pelakon extends Sel {
         this.setPosisiX(nx);
         this.setPosisiY(ny);
     }
+
 }
